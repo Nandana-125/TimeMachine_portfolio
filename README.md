@@ -93,6 +93,20 @@ The rotating dial navigation is my custom vanilla JavaScript feature. It control
 
 ## Document link : https://docs.google.com/document/d/1X1kQu5EHPDZArwSzgrUofaPDhLcbS0gHTu7JjyPO_Z8/edit?usp=sharing
 
+## License
+
+This project is licensed under the [MIT License](./LICENSE) © 2025 [Nandana Pradeep](https://github.com/Nandana-125).
+
+## Class Link 
+[https://northeastern.instructure.com/courses/226004/assignments/2902286](https://northeastern.instructure.com/courses/226004)
+
+## Video Link : 
+https://drive.google.com/file/d/1A7FVQEVsJhVOx5adKKTuFmvlAOwLZ-Ia/view?usp=sharing
+
+
+## PPT link : 
+https://docs.google.com/presentation/d/1WuQC-jL_L0f-KtUqwDcPsOtIu3E7bulQpXw9lNp97mk/edit?usp=sharing
+
 
 
 

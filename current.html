@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nandana" />
+    <meta name="description" content="Current — Chat-style profile" />
+    <link rel="icon" href="./images/time-machine.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/current.css" />
+    <title>Current — Chat</title>
+  </head>
+  <body>
+    <!-- Back button (reusing the same styling as Enter) -->
+    <button id="back-to-machine" class="enter-btn back-btn">
+      ← Back to Time Machine
+    </button>
+
+    <!-- Chat header -->
+    <header class="chat-header" role="banner" aria-label="Chat Header">
+      <div class="chat-title">Current — My Live Snapshot</div>
+      <div class="chat-subtitle">About me @ 2025</div>
+    </header>
+
+    <!-- Chat area -->
+    <main
+      id="chat"
+      class="chat"
+      role="main"
+      aria-live="polite"
+      aria-label="Conversation"
+    >
+      <!-- Messages are injected by JS -->
+    </main>
+    <footer
+      class="composer"
+      role="contentinfo"
+      aria-label="Composer (disabled)"
+    >
+      <input
+        id="fake-input"
+        type="text"
+        placeholder="(Read-only) This is just a Demo text box "
+        disabled
+        aria-disabled="true"
+      />
+      <button class="send-btn" disabled aria-disabled="true">Send</button>
+    </footer>
+
+    <script type="module" src="./js/current.js"></script>
+  </body>
+</html>

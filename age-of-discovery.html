@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nandana" />
+    <meta name="description" content="Age of Discovery — 2000s Retro Skills" />
+    <link rel="icon" href="./images/time-machine.png" />
+
+    <!-- 2000s vibes: pixel  terminal fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/discovery.css" />
+    <title>Age of Discovery — Skills</title>
+  </head>
+  <body>
+    <!-- Top-left retro button -->
+    <button
+      id="back-to-machine"
+      class="retro-btn"
+      aria-label="Back to Time Machine"
+    >
+      ◀ BACK TO TIME MACHINE
+    </button>
+
+    <!-- Big neon headline with glitch -->
+    <header class="hero">
+      <h1 class="glitch" data-text="AGE OF DISCOVERY">AGE OF DISCOVERY</h1>
+      <p class="subtitle">my skill tree // y2k edition</p>
+    </header>
+
+    <!-- Main stage -->
+    <main class="stage" aria-label="Skills stage">
+      <!-- Neon Disc Row -->
+      <section class="skills-row" role="list">
+        <article class="disc" role="listitem" data-skill="HTML">
+          <div class="ring"></div>
+          <img src="./images/htmllogo.png" alt="HTML logo" />
+          <h2>HTML</h2>
+          <p class="blip">semantic tags • forms • a11y</p>
+        </article>
+
+        <article class="disc" role="listitem" data-skill="CSS">
+          <div class="ring"></div>
+          <img src="./images/csslogo.png" alt="CSS logo" />
+          <h2>CSS</h2>
+          <p class="blip">flex/grid • animations • responsive</p>
+        </article>
+
+        <article class="disc" role="listitem" data-skill="JavaScript">
+          <div class="ring"></div>
+          <img src="./images/javalogo.png" alt="JavaScript logo" />
+          <h2>JavaScript</h2>
+          <p class="blip">ES6+ modules • fetch • DOM</p>
+        </article>
+
+        <article class="disc" role="listitem" data-skill="React">
+          <div class="ring"></div>
+          <img src="./images/reactlogo.png" alt="React logo" />
+          <h2>React</h2>
+          <p class="blip">hooks • state • routing</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- CRT scanlines vignette overlay -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- Neon cursor -->
+    <div id="retro-cursor" aria-hidden="true"></div>
+
+    <!-- Starfield particles -->
+    <div id="stars" aria-hidden="true"></div>
+
+    <footer class="ticker" aria-hidden="true">
+      <span
+        >★ WELCOME TO THE Y2K SKILL PORTAL ★ HTML ★ CSS ★ JAVASCRIPT ★ REACT
+        ★</span
+      >
+    </footer>
+
+    <script type="module" src="./js/discovery.js"></script>
+  </body>
+</html>

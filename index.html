@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nandana" />
+    <meta name="description" content="Retro Time Machine Personal Homepage" />
+    <link rel="icon" href="./images/timemachine.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Time Machine Homepage</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#about">ABOUT ME</a>
+      <a href="#contact">CONTACT</a>
+      <a href="#how-it-works">HOW THE SITE WORKS</a>
+    </nav>
+    <section class="starting">
+    <!-- Intro text container -->
+<div class="intro">
+  <h2 id="typewriter"></h2>
+  <p id="subtext"></p>
+</div>
+
+    <!-- Main Time Machine Section -->
+    <main class="machine-container">
+      <div class="machine">
+        <img
+          src="./images/timemachine.png"
+          alt="Retro Time Machine"
+          class="machine-img"
+        />
+        <!-- circular ring nav ABOVE the image -->
+<div class="ring-nav" id="ringNav">
+  <button class="ring-item" data-index="0">Ancient Past</button>
+  <button class="ring-item" data-index="1">Age of Discovery </button>
+  <button class="ring-item" data-index="2">Current</button>
+  <button class="ring-item" data-index="3">Future</button>
+</div>
+        <div class="dial" id="dial">
+          <div class="arrow"></div>
+        </div>
+      </div>
+
+      <div class="era-display" id="eraDisplay">
+        Selected Era: <span>Current</span>
+      </div>
+
+      <button class="enter-btn">ENTER</button>
+    </section>
+
+      <!-- ===== ABOUT ME ===== -->
+<section id="about" class="section about-section">
+  
+     <div class="neon-box">
+      <h2 class="section-title">About Me</h2>
+      <p >
+        I'm a Full-Stack Engineer with hands-on experience in designing and building large-scale
+        software systems that create real impact. I've developed and delivered complex applications
+        across the financial and physical trading services space, as well as within IT services and
+        consulting. My work spans security, infrastructure, and scalable architecture, always with a
+        strong focus on user experience and system reliability.
+      </p>
+      <p>
+        Currently, I’m pursuing a Master’s in Computer Science with a focus on Machine Learning and
+        Artificial Intelligence, expanding my technical toolkit to build smarter, data-driven solutions.
+        I'm passionate about bridging software engineering with AI to solve real-world problems at scale.
+      </p>
+    </div>
+  
+</section>
+
+<!-- ===== HOW THE SITE WORKS ===== -->
+<section id="how-it-works" class="section info-section">
+  <div class="neon-box">
+    <h2 class="section-title">How the Site Works</h2>
+    <ul class="square-list">
+      <li>Turn the **Time Dial** to pick an era.</li>
+      <li><strong>Ancient Past</strong> → Education & early experience engraved on stone.</li>
+      <li><strong>Age of Discovery</strong> → Skills highlighted in a 2000’s retro neon page.</li>
+      <li><strong>Current</strong> → Chat-style snapshot of what I’m doing now.</li>
+      <li><strong>Future</strong> → Futuristic goals with animated constellation grid.</li>
+      <li>Press <em>Enter</em> to jump into the selected era.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CONTACT ME ===== -->
+<section id="contact" class="section contact-section">
+  <div class="neon-box">
+    <h2 class="section-title">Contact Me</h2>
+    <p>
+      GitHub: <a href="https://github.com/your-Nand-125" target="_blank" rel="noopener">github.com/Nand-125</a><br />
+      Email: <a href="nandana.pradeep125@gmail.com">nandana.pradeep125@gmail.com</a>
+    </p>
+  </div>
+</section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

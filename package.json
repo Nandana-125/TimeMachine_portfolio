@@ -1,0 +1,14 @@
+{
+  "name": "time-machine-homepage",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^9.10.0",
+    "prettier": "^3.6.2"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,156 @@
+:root {
+  --bg: #0d0d0d;
+  --panel: #171717;
+  --panel-2: #1f1f1f;
+  --text: #e6e6e6;
+  --muted: #9aa0a6;
+  --accent: #4caf50;
+  --bubble-user: #0f2212;
+  --bubble-assistant: #121212;
+  --border: #2a2a2a;
+}
+
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 30;
+}
+
+/* ===================== Header =========================== */
+.chat-header {
+  background: linear-gradient(180deg, #131313 0%, #101010 100%);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding: 60px 20px 14px; /* top padding leaves room beneath back button */
+  text-align: center;
+}
+
+.chat-title {
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  letter-spacing: 0.02em;
+}
+
+.chat-subtitle {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/*===================== Chat scroller ========================= */
+.chat {
+  height: calc(100vh - 60px - 64px - 54px); /* total minus header & composer */
+  overflow-y: auto;
+  background:
+    radial-gradient(
+      1200px 600px at 50% -10%,
+      rgba(76, 175, 80, 0.08),
+      transparent
+    ),
+    radial-gradient(
+      900px 400px at 90% 0%,
+      rgba(76, 175, 80, 0.06),
+      transparent
+    ),
+    var(--bg);
+  padding: 18px 0 24px;
+}
+
+/* ===================== Message rows =========================*/
+.msg {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 12px;
+  align-items: start;
+  max-width: 980px;
+  margin: 0 auto 10px;
+  padding: 12px 16px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: #0a0a0a;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  font-weight: 700;
+  user-select: none;
+}
+
+.bubble {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--bubble-assistant);
+  box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  transition: box-shadow 0.25s ease;
+}
+
+.msg.assistant .bubble {
+  background: var(--bubble-assistant);
+}
+
+.msg.user .bubble {
+  background: var(--bubble-user);
+  border-color: #1e3b20;
+}
+
+.msg:hover .bubble {
+  box-shadow: 0 0 16px 0 rgba(76, 175, 80, 0.15);
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 8px;
+}
+
+/*============== Composer (typing area) (read-only hint)================ */
+.composer {
+  position: sticky;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 88px;
+  gap: 10px;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  padding: 12px;
+}
+
+.composer input {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--text);
+}
+
+.send-btn {
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: not-allowed; /* read-only */
+  opacity: 0.7;
+}
+
+/* =============== Simple fade-in for messages================ */
+.msg.reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.msg.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

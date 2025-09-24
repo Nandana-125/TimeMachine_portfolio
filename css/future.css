@@ -1,0 +1,294 @@
+:root {
+  --bg: #05070b;
+  --panel: #0b0f16;
+  --text: #e9f5ff;
+  --muted: #9fb4c3;
+  --cyan: #21e6ff;
+  --violet: #b06bff;
+  --lime: #8dff4f;
+  --border: #1a2230;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(
+      1200px 600px at 50% -10%,
+      rgba(33, 230, 255, 0.08),
+      transparent
+    ),
+    radial-gradient(
+      900px 400px at 85% 0%,
+      rgba(176, 107, 255, 0.06),
+      transparent
+    ),
+    var(--bg);
+  font-family:
+    "Exo 2",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+}
+
+/* ================ Futuristic back button =============== */
+.neo-btn {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1000;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #2c3d52;
+  background: linear-gradient(180deg, #0f1420, #0a0f17);
+  color: #bfeeff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 1px rgba(33, 230, 255, 0.2),
+    0 0 18px rgba(33, 230, 255, 0.25),
+    inset 0 0 18px rgba(176, 107, 255, 0.08);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.15s ease,
+    color 0.2s ease;
+}
+.neo-btn:hover {
+  color: #e9f5ff;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(33, 230, 255, 0.4),
+    0 0 26px rgba(176, 107, 255, 0.38),
+    inset 0 0 24px rgba(33, 230, 255, 0.12);
+}
+
+/* ============== Canvas grid  vignette ================= */
+#grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: inset 0 0 160px rgba(0, 0, 0, 0.65);
+}
+
+/* ========= Hero ============ */
+.hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 92px 16px 8px;
+}
+.title {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #e9f5ff;
+}
+.subtitle {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/*============ Glitch effect =================*/
+.glitch {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 12px rgba(33, 230, 255, 0.5));
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+}
+.glitch::before {
+  color: var(--cyan);
+  transform: translate(-2px, -1px);
+  animation:
+    g-x 2.1s steps(20) infinite,
+    g-clip 2.5s steps(24) infinite;
+}
+.glitch::after {
+  color: var(--violet);
+  transform: translate(2px, 1px);
+  animation:
+    g-x 2s steps(19) infinite reverse,
+    g-clip 2.4s steps(23) infinite reverse;
+}
+@keyframes g-x {
+  to {
+    transform: translate(3px, 0);
+  }
+}
+@keyframes g-clip {
+  to {
+    clip-path: inset(0 0 85% 0);
+  }
+}
+
+/* =========== Wrapper ============ */
+.wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 16px auto 80px;
+  padding: 0 16px;
+}
+
+/* ============ Goals grid ============ */
+.goals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: clamp(16px, 3.2vw, 28px);
+  margin-top: 22px;
+}
+
+/* ============ Goal card ============= */
+.goal-card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.18)),
+    radial-gradient(
+      100% 100% at 0% 0%,
+      rgba(33, 230, 255, 0.08),
+      transparent 60%
+    );
+  padding: 20px 20px 18px;
+  overflow: hidden;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.22s ease,
+    border-color 0.18s ease;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  backdrop-filter: blur(3px);
+}
+.goal-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 16px;
+  background: conic-gradient(
+    from 180deg,
+    rgba(33, 230, 255, 0),
+    rgba(33, 230, 255, 0.25),
+    rgba(176, 107, 255, 0.25),
+    rgba(33, 230, 255, 0)
+  );
+  filter: blur(18px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+.goal-card:hover {
+  transform: translateY(-6px);
+  border-color: #304059;
+  box-shadow:
+    0 10px 34px rgba(33, 230, 255, 0.18),
+    0 0 24px rgba(176, 107, 255, 0.15);
+}
+
+.goal-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.chip {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: #031a14;
+  padding: 6px 10px;
+  background: linear-gradient(180deg, #8affff, #21e6ff 60%, #00a8c3);
+  border: 1px solid #5be7ff;
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(33, 230, 255, 0.35);
+}
+.goal-header h2 {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: #e9f5ff;
+}
+
+.goal-list {
+  margin: 8px 0 0 0;
+  padding-left: 16px;
+  color: var(--text);
+}
+.goal-list li {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* ============ Reveal on scroll ================  */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ Footer ticker =================  */
+.ticker {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(#0a0f17, #090d14);
+  border-top: 1px solid var(--border);
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  color: #c9ecff;
+}
+.ticker span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 18s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ============== Responsive =================  */
+@media (max-width: 800px) {
+  .goals {
+    grid-template-columns: 1fr;
+  }
+}

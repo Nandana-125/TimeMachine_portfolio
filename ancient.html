@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nandana" />
+    <meta name="description" content="Ancient Past — Stone Age timeline" />
+    <link rel="icon" href="./images/time-machine.png" />
+
+    <!-- Old era fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=IM+Fell+English:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/ancient.css" />
+    <title>Ancient Past — Stone Age</title>
+  </head>
+  <body>
+    <!-- Back button -->
+    <button
+      id="back-to-machineß"
+      class="stone-btn"
+      aria-label="Back to Time Machine"
+    >
+      ◀ BACK TO TIME MACHINE
+    </button>
+
+    <!-- Rocky backdrop  glow -->
+    <div class="cave" aria-hidden="true"></div>
+    <div class="embers" aria-hidden="true"></div>
+
+    <header class="hero">
+      <h1 class="title rock-etch" data-text="ANCIENT PAST">ANCIENT PAST</h1>
+    </header>
+
+    <main class="slab">
+      <!-- Education -->
+      <section class="panel reveal" id="education">
+        <h2 class="section rock-etch">EDUCATION</h2>
+        <ul class="list">
+          <li>
+            <strong>Rajagiri Public School</strong> — Class 12 (2020)<br />
+            <em>Computer Maths</em> — Kochi, Kerala, India
+          </li>
+          <li>
+            <strong>Christ University</strong> — BCA (2021–2024)<br />
+            <em>Bachelor of Computer Applications</em> — Bengaluru, India
+          </li>
+        </ul>
+      </section>
+
+      <!-- Experience -->
+      <section class="panel reveal" id="experience">
+        <h2 class="section rock-etch">EXPERIENCE</h2>
+
+        <article class="job">
+          <h3 class="job-title">
+            Software Engineer Intern — PAMP Technologies (MKS PAMP)
+          </h3>
+          <p class="meta">Kochi, India · Jun 2024 – Nov 2024</p>
+          <ul>
+            <li>
+              Revamped legacy trading portal using React/Redux + APIs; improved
+              responsiveness and cut load times ~35%.
+            </li>
+            <li>
+              Built real-time gold price visualizations (Chart.js); collaborated
+              with backend to optimize APIs; deployed via Netlify + GitHub
+              Actions.
+            </li>
+            <li>
+              Led a team of 4 interns (reviews, sprints); adoption across 3
+              offices improved workflow efficiency ~50%.
+            </li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3 class="job-title">Data Science Intern — Afame Technologies</h3>
+          <p class="meta">Remote · May 2024 – Jun 2024</p>
+          <ul>
+            <li>
+              Developed sales prediction (Linear Regression) with ~87% R² using
+              cleaned marketing/sales data (Pandas/NumPy).
+            </li>
+            <li>
+              Engineered features (ad spend, demographics, platform performance)
+              to improve forecast reliability.
+            </li>
+            <li>
+              Presented insights supporting data-driven marketing and budget
+              allocation.
+            </li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3 class="job-title">Cloud Engineer Intern — Cloud Institution</h3>
+          <p class="meta">Bengaluru, India · Apr 2024 – May 2024</p>
+          <ul>
+            <li>
+              Hands-on with Docker, Jenkins, Terraform for container deploys and
+              CI/CD automation.
+            </li>
+            <li>
+              Provisioned AWS (EC2, S3, IAM, VPC) via Terraform; earned AWS
+              Cloud Practitioner.
+            </li>
+            <li>
+              Collaborated on simulated projects focusing on architecture,
+              monitoring, and security best practices.
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <!-- Full black spider that crawls across the page -->
+    <div id="spider-layer" aria-hidden="true"></div>
+
+    <footer class="footnote">Nandana•Pradeep</footer>
+
+    <script type="module" src="./js/ancient.js"></script>
+  </body>
+</html>

@@ -11,7 +11,15 @@ The site acts as a “Time Machine,” where turning a dial lets the user naviga
 
 The creative addition is the **interactive Time Machine dial** that rotates and highlights different eras. Users can “enter” to explore each page, with animations and custom JavaScript functionality built from scratch.
 
-## Screenshot
+## Screenshots 
+
+<img width="1705" height="924" alt="Screenshot 2025-09-24 at 1 29 55 AM" src="https://github.com/user-attachments/assets/2a8fe0ed-658b-4737-acf9-4301227b7018" />
+<img width="1706" height="859" alt="Screenshot 2025-09-24 at 1 29 34 AM" src="https://github.com/user-attachments/assets/2b1f8cd8-2673-4f30-ae0a-099e25fd8dde" />
+<img width="1710" height="925" alt="Screenshot 2025-09-24 at 1 28 55 AM" src="https://github.com/user-attachments/assets/c46b3d9f-53e4-476c-af92-7dad8ec07b76" />
+<img width="1708" height="928" alt="Screenshot 2025-09-24 at 1 28 36 AM" src="https://github.com/user-attachments/assets/ec88434d-e1af-473d-bfbe-678d1a4f030c" />
+<img width="1710" height="974" alt="Screenshot 2025-09-24 at 1 28 14 AM" src="https://github.com/user-attachments/assets/70ed39cf-0a83-42d8-bac6-49576a371c26" />
+<img width="1710" height="929" alt="Screenshot 2025-09-24 at 1 27 56 AM" src="https://github.com/user-attachments/assets/837384b6-b1f9-48f4-ac4d-1027c3042ed0" />
+
 
 ## Tech Requirements
 - **HTML5** (semantic structure, multiple pages)  

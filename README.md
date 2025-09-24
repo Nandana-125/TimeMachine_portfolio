@@ -83,6 +83,8 @@ Prompts used included: “ How to make a spider crawl across the screen,” “h
 
 The rotating dial navigation is my custom vanilla JavaScript feature. It controls which “era” is selected, highlights it, and links to the correct page. It was fully written and customized for this project.
 
+## Document link : https://docs.google.com/document/d/1X1kQu5EHPDZArwSzgrUofaPDhLcbS0gHTu7JjyPO_Z8/edit?usp=sharing
+
 
 
 

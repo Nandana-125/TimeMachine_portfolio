@@ -1,3 +1,8 @@
+// I really love the spiders feature! It adds a lot of character to the page and reflects your creativity and fun! 
+// I think the implementation of how the spiders move i.e. the wander logic makes the spiders feel more real! Great touch! 
+// There are numbers like num_spiders and size that can be pulled into constants for easier adjustments
+// I notice that each spider is animated independently using requestAnimatinoFrame which can hinder performance with more spiders! 
+// I also noticed that the spiders used fixed positions. When I resized the window the spiders ended up in awkward positions. You could add a resize event listener to fix this! 
 /* Back to main page */
 document.getElementById("back-to-machine")?.addEventListener("click", (e) => {
   e.preventDefault();

@@ -1,4 +1,7 @@
-// main.js
+// main.js 
+// your code exhibits great modularity! your functions are well separated and keeps your code readable and easily maintainable! 
+// also good implementation of ES6 features like arrow functions, const/let and optional chaining! 
+// the dial interaction is currently only mouse based and could cause issues in a mobile environment. I would consider adding things like touch events 
 const dial = document.getElementById("dial");
 const eraDisplay = document.getElementById("eraDisplay").querySelector("span");
 const ringNav = document.getElementById("ringNav");
@@ -38,7 +41,7 @@ function positionRingItems() {
     el.textContent = headings[i].toUpperCase();
   });
 }
-
+// your typewriter and subtext effects here have nearly identical code. I think you could abstract these into a single function! 
 /* Recompute when image is ready and on resize */
 function readyPositioning() {
   // If the image is already cached/loaded, position immediately

@@ -1,3 +1,8 @@
+// you use values for grid spacing, connection distance, etc. that you could define as constants that would make the code easier to alter. 
+// you also use a double for loop which could hinder performance in larger displays! 
+// good code structure again! 
+// I think the animated constellation is extremely impressive without using any external libraries! Great demonstration of your skills! 
+
 // js/future.js
 
 /* Back button */
@@ -130,4 +135,4 @@ function tick(t = 0) {
 
 resize();
 addEventListener("resize", resize);
-reque;
+reque; // not sure if this is a typo? 

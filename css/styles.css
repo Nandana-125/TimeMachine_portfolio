@@ -1,3 +1,6 @@
+/* Overall great CSS files! Clear sectioning and comments make your code easy to follow. Your use of different CSS components really shows your creativity here! */
+/* The only minor issue I see in this file is that there appears to be a duplicate selector (.machine-img) which can be merged into one rule. */
+
 * {
   margin: 0;
   padding: 0;
